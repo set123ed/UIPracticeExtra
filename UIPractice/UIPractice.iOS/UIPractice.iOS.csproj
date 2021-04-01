@@ -128,6 +128,14 @@
     <PackageReference Include="Prism.Unity.Forms">
       <Version>8.0.0.1909</Version>
     </PackageReference>
+    <PackageReference Include="Fody">
+      <Version>6.5.0</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="PropertyChanged.Fody">
+      <Version>3.3.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -141,5 +149,7 @@
     <BundleResource Include="Resources\Glass.png" />
     <BundleResource Include="Resources\Moon.png" />
     <BundleResource Include="Resources\Sick.png" />
+    <BundleResource Include="Resources\Stress.png" />
+    <BundleResource Include="Resources\Wedding.jpg" />
   </ItemGroup>
 </Project>
