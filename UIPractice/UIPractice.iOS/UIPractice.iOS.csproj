@@ -136,4 +136,10 @@
       <Name>UIPractice</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Air.png" />
+    <BundleResource Include="Resources\Glass.png" />
+    <BundleResource Include="Resources\Moon.png" />
+    <BundleResource Include="Resources\Sick.png" />
+  </ItemGroup>
 </Project>
