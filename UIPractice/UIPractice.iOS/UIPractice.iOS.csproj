@@ -151,5 +151,6 @@
     <BundleResource Include="Resources\Sick.png" />
     <BundleResource Include="Resources\Stress.png" />
     <BundleResource Include="Resources\Wedding.jpg" />
+    <BundleResource Include="Resources\Clock.png" />
   </ItemGroup>
 </Project>

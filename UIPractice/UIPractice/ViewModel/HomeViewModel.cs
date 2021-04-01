@@ -9,6 +9,10 @@ namespace UIPractice.ViewModel
         public Items Anxiety { get; set; } = new Items();
         public Items Stress { get; set; } = new Items();
         public Items Glass { get; set; } =  new Items();
+        public Items Wedding { get; set; } = new Items();
+        public Items Clock { get; set; } = new Items();
+
+
 
         public string QuickHelp => "Quick Help";
         public string DailyMeditation => "Daily Meditation";
@@ -16,6 +20,12 @@ namespace UIPractice.ViewModel
         public string Sleep_ => "Sleep";
         public string Anxiety_ => "Anxiety";
         public string Stress_ => "Stress";
+        public string RestRelax => "Rest & Relax";
+        public string Min => "30 Min";
+        public string NewMusic => "New Music";
+        public string ViewAll => "View All";
+
+
 
 
         public HomeViewModel()
@@ -30,6 +40,10 @@ namespace UIPractice.ViewModel
             Anxiety.Image = "Sick";
             Stress.Image = "Stress";
             Glass.Image = "Glass";
+            Wedding.Image = "Wedding.jpg";
+            Clock.Image = "Clock";
+
+
         }
 
     }
