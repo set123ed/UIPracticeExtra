@@ -4,11 +4,11 @@ using Prism.Navigation;
 
 namespace UIPractice.ViewModel
 {
-    public class BaseViewModel : INotifyPropertyChanged 
+    public abstract class BaseViewModel : INotifyPropertyChanged 
     {
         public  INavigationService NavigationService { get; }
 
-        public BaseViewModel(INavigationService navigationService)
+        protected BaseViewModel(INavigationService navigationService)
         {
             NavigationService = navigationService;
         }

@@ -70,21 +70,27 @@
 
            <Button  Text="{Binding ViewAll}" TextColor="Gray" HorizontalOptions="End" FontSize="15"   Grid.Row="5"  Grid.Column="3"/>
 
-
-           <CollectionView ItemsSource="{Binding MusicList}"   ItemsLayout="HorizontalList" Grid.Row="6" Grid.ColumnSpan="4">
+           
+           <CollectionView  ItemsSource="{Binding MusicList}"   ItemsLayout="HorizontalList" Grid.Row="6" Grid.ColumnSpan="4">
                <CollectionView.ItemTemplate>
                    <DataTemplate>
+                           
                        <Grid Scale="0.9" Padding="10"  >
                            <Grid.RowDefinitions>
                                <RowDefinition Height="*"/>
                                <RowDefinition Height="Auto"/>
                            </Grid.RowDefinitions>
-
+                           
                                 <Frame  WidthRequest="250" Padding="0,0,0,60"  CornerRadius="0" HasShadow="False" >
-                                <StackLayout>
-                                    <ImageButton Source="{Binding Image}" HorizontalOptions="Center"/>
-                                </StackLayout>
-                                    
+
+                                    <ImageButton Source="{Binding Image}" HorizontalOptions="Center" >
+                                        <ImageButton.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Command="{Binding BidingContext.Navigate,
+                                                Source={x:Reference HomePage}}"
+                                                CommandParameter="{Binding}"/>
+                                        </ImageButton.GestureRecognizers>
+                                    </ImageButton>
                                 </Frame>
 
                                  <Frame HasShadow="False"   VerticalOptions="EndAndExpand"  Padding="0,0,0,70" Margin="-10,0,-10,-70" >
@@ -93,16 +99,16 @@
                                         FontSize="21" VerticalTextAlignment="End" Padding="20,10,0,14" TextColor="Black"     />
                                      
                                  </Frame>
-
-                           
+                                 
 
                                  <Label Text="{Binding Minutes}" VerticalTextAlignment="End" Margin="40,0,0,-12"/>
 
                            <Image Source="{Binding Image2}" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,-15" />
 
 
+
                        </Grid>
-                    
+              
                    </DataTemplate>
                </CollectionView.ItemTemplate>
            </CollectionView>
