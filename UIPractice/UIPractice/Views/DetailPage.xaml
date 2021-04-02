@@ -2,14 +2,12 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="UIPractice.Views.DetailPage"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    ios:Page.UseSafeArea="true">
+    x:Class="UIPractice.Views.DetailPage">
     
     <ScrollView> 
     <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="260"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="20"/>
@@ -21,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <Frame Grid.Row="0" BackgroundColor="MediumTurquoise" HasShadow="False" Grid.ColumnSpan="3">
 
-        <ImageButton Source="{Binding Back}" HorizontalOptions="Start" />
+        <ImageButton Source="{Binding Back}" HorizontalOptions="Start" HeightRequest="35" VerticalOptions="End" />
 
         </Frame>
         <Image Source="{Binding Wedding.Image}" Grid.Row="1" Scale="1.05" Grid.ColumnSpan="3" />
@@ -30,7 +28,7 @@
         <ImageButton Source="{Binding Image4}" Grid.Column="2" Grid.Row="2" VerticalOptions="Center" Margin="-10,10,0,-10"/>
 
         <Frame Grid.Row="4" HasShadow="False" BackgroundColor="LightGray" Grid.ColumnSpan="3" >
-        <Label Text="{Binding Title}" Grid.Row="4" Padding="10,0,10,0" FontSize="Large" Grid.ColumnSpan="3"/>
+        <Label Text="{Binding Title}" TextColor="OliveDrab" Grid.Row="4" Padding="10,0,10,0" FontSize="Large" Grid.ColumnSpan="3"/>
         </Frame>
 
         </Grid>

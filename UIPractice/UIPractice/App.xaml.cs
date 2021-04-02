@@ -17,7 +17,7 @@ namespace UIPractice
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            await NavigationService.NavigateAsync($"{Config.DetailPage}");
+            await NavigationService.NavigateAsync($"{Config.MyTabbedPage}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
