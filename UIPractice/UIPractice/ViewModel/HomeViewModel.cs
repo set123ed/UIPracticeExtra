@@ -1,18 +1,19 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using UIPractice.Models;
 namespace UIPractice.ViewModel
 {
     public class HomeViewModel
     {
-        public Items Breathe { get; set; }  = new Items();
+        public ObservableCollection<Music> MusicList { get; }
+
+        public Items Breathe { get; set; } = new Items();
         public Items Sleep { get; set; } = new Items();
         public Items Anxiety { get; set; } = new Items();
         public Items Stress { get; set; } = new Items();
-        public Items Glass { get; set; } =  new Items();
+        public Items Glass { get; set; } = new Items();
         public Items Wedding { get; set; } = new Items();
         public Items Clock { get; set; } = new Items();
-
-
 
         public string QuickHelp => "Quick Help";
         public string DailyMeditation => "Daily Meditation";
@@ -24,9 +25,6 @@ namespace UIPractice.ViewModel
         public string Min => "30 Min";
         public string NewMusic => "New Music";
         public string ViewAll => "View All";
-
-
-
 
         public HomeViewModel()
         {
@@ -43,8 +41,18 @@ namespace UIPractice.ViewModel
             Wedding.Image = "Wedding.jpg";
             Clock.Image = "Clock";
 
+            MusicList = new ObservableCollection<Music>
+            {
+                new Music("Wedding","Foto1.jpg","5 Min","BlackClock"),
+                new Music("Engagement","Foto2.jpg","8 Min","BlackClock"),
+                new Music("About Us","Foto3.jpg","10 Min","BlackClock"),
+                new Music("Destination","Foto4.jpg","14 Min","BlackClock"),
+                new Music("Booking","Foto5.jpg","18 Min","BlackClock")
+            };
 
         }
 
+
+
     }
-}
+    }

@@ -152,5 +152,16 @@
     <BundleResource Include="Resources\Stress.png" />
     <BundleResource Include="Resources\Wedding.jpg" />
     <BundleResource Include="Resources\Clock.png" />
+    <BundleResource Include="Resources\foto1.jpg" />
+    <BundleResource Include="Resources\foto2.jpg" />
+    <BundleResource Include="Resources\foto3.jpg" />
+    <BundleResource Include="Resources\foto4.jpg" />
+    <BundleResource Include="Resources\foto5.jpg" />
+    <BundleResource Include="Resources\BlackClock.png" />
+    <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\cam.png" />
+    <BundleResource Include="Resources\luna.png" />
+    <BundleResource Include="Resources\meal.png" />
+    <BundleResource Include="Resources\user.png" />
   </ItemGroup>
 </Project>

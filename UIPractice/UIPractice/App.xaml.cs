@@ -17,13 +17,15 @@ namespace UIPractice
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            await NavigationService.NavigateAsync($"{Config.HomePage}");
+            await NavigationService.NavigateAsync($"{Config.MyTabbedPage}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>(Config.HomePage);
+            containerRegistry.RegisterForNavigation<MyTabbedPage>(Config.MyTabbedPage);
             containerRegistry.RegisterForNavigation<NavigationPage>(Config.NavigationPage);
+            containerRegistry.Register<HomePage>();
 
 
         }

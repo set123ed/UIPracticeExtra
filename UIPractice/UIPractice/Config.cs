@@ -7,6 +7,7 @@ namespace UIPractice
         public const string NavigationPage = "NavPage";
         public const string HomePage = "Home";
         public const string DetailPage = "Detail";
+        public const string MyTabbedPage = "Tab";
         
     }
 }

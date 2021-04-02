@@ -6,14 +6,16 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     ios:Page.UseSafeArea="true">
    <ScrollView>
-       <Grid Padding="20,20,20,20" >
+       <Grid Padding="20,20,20,20" BackgroundColor="White" >
            <Grid.RowDefinitions>
                <RowDefinition Height="50" />
                <RowDefinition Height="60"/>
                <RowDefinition Height="30"/>
-               <RowDefinition Height="70"/>
-            <RowDefinition Height="260"/>
-               <RowDefinition Height="50"/>
+               <RowDefinition Height="40"/>
+               <RowDefinition Height="260"/>
+               <RowDefinition Height="20"/>
+               <RowDefinition Height="230"/>
+              
            </Grid.RowDefinitions>
 
            <Grid.ColumnDefinitions>
@@ -52,10 +54,7 @@
                    FontSize="Medium" HeightRequest="100" Grid.Row="2" Grid.Column="3" Margin="20,0,0,0" />
 
             <Label Text="{Binding DailyMeditation}" VerticalTextAlignment="Center" FontAttributes="Bold"
-                   FontSize="23" HeightRequest="100" Grid.Row="3" Grid.ColumnSpan="2"/>
-
-            <Label Text="{Binding DailyMeditation}" VerticalTextAlignment="Center" FontAttributes="Bold"
-                   FontSize="23" HeightRequest="100" Grid.Row="3" Grid.ColumnSpan="2"/>
+                   FontSize="23" HeightRequest="100" Grid.Row="3" Grid.ColumnSpan="2"  />
 
             <ImageButton Source="{Binding Wedding.Image}" Grid.Row="4" Grid.ColumnSpan="4"  CornerRadius="25" Padding="0,0,0,0" />
 
@@ -67,10 +66,41 @@
 
            <Image Source="{Binding Clock.Image}" Grid.Row="4" Grid.Column="0" VerticalOptions="End" Margin="-20,0,0,23" />
 
-           <Label  Text="{Binding NewMusic}" FontAttributes="Bold" FontSize="23" HeightRequest="100" Grid.Row="5"  Grid.ColumnSpan="0"/>
+           <Label  Text="{Binding NewMusic}" FontAttributes="Bold" FontSize="23" VerticalOptions="Center" Grid.Row="5"  Grid.ColumnSpan="2"/>
 
-           <Label  Text="{Binding ViewAll}" FontAttributes="Bold" FontSize="23" HeightRequest="100" Grid.Row="5"  Grid.ColumnSpan="0"/>
+           <Button  Text="{Binding ViewAll}" TextColor="Gray" HorizontalOptions="End" FontSize="15"   Grid.Row="5"  Grid.Column="3"/>
 
+
+           <CollectionView ItemsSource="{Binding MusicList}"  ItemsLayout="HorizontalList" Grid.Row="6" Grid.ColumnSpan="4">
+               <CollectionView.ItemTemplate>
+                   <DataTemplate>
+                       <Grid Scale="0.9" Padding="10"  >
+                           <Grid.RowDefinitions>
+                               <RowDefinition Height="*"/>
+                               <RowDefinition Height="Auto"/>
+                           </Grid.RowDefinitions>
+                                <Frame  WidthRequest="250" Padding="0,0,0,60"  CornerRadius="0" HasShadow="False" >
+                                <StackLayout>
+                                    <ImageButton Source="{Binding Image}" HorizontalOptions="Center"/>
+                                </StackLayout>
+                                    
+                                </Frame>
+
+                                 <Frame HasShadow="False"   VerticalOptions="EndAndExpand"  Padding="0,0,0,70" Margin="-10,0,-10,-70" >
+
+                                 <Label Text="{Binding Name}" FontFamily="Arial" FontAttributes="Bold"
+                                        FontSize="21" VerticalTextAlignment="End" Padding="20,10,0,14" TextColor="Black"     />                    
+                                 </Frame>
+
+                                 <Label Text="{Binding Minutes}" VerticalTextAlignment="End" Margin="40,0,0,-12"/>
+
+                           <Image Source="{Binding Image2}" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,-15" />
+
+                       </Grid>
+                    
+                   </DataTemplate>
+               </CollectionView.ItemTemplate>
+           </CollectionView>
 
        </Grid>
    </ScrollView>
