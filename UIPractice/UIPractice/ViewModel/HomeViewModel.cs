@@ -3,11 +3,12 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Prism.Navigation;
 using UIPractice.Models;
+using UIPractice.Views;
 using Xamarin.Forms;
 
 namespace UIPractice.ViewModel
 {
-    public class HomeViewModel : BaseViewModel
+    public class HomeViewModel 
     {
         public ObservableCollection<Music> MusicList { get; }
         public ICommand Navigate { get; }
@@ -30,9 +31,8 @@ namespace UIPractice.ViewModel
         public string NewMusic => "New Music";
         public string ViewAll => "View All";
 
-        public HomeViewModel(INavigationService navigationService) : base(navigationService)
+        public HomeViewModel()
         {
-            Navigate = new Command(NavigateTo);
 
             Breathe.Title = "Breathe";
             Sleep.Title = "Sleep";
@@ -58,9 +58,6 @@ namespace UIPractice.ViewModel
 
         }
 
-        private async void NavigateTo()
-        {
-
-        }
+        
     }
     }
