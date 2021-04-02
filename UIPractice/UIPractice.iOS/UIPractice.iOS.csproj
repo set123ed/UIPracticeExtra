@@ -163,5 +163,9 @@
     <BundleResource Include="Resources\luna.png" />
     <BundleResource Include="Resources\meal.png" />
     <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\back1.png" />
+    <BundleResource Include="Resources\love.png" />
+    <BundleResource Include="Resources\share.png" />
   </ItemGroup>
 </Project>

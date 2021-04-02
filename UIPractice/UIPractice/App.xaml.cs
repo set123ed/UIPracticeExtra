@@ -17,7 +17,7 @@ namespace UIPractice
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            await NavigationService.NavigateAsync($"{Config.MyTabbedPage}");
+            await NavigationService.NavigateAsync($"{Config.DetailPage}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -25,6 +25,7 @@ namespace UIPractice
             containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>(Config.HomePage);
             containerRegistry.RegisterForNavigation<MyTabbedPage>(Config.MyTabbedPage);
             containerRegistry.RegisterForNavigation<NavigationPage>(Config.NavigationPage);
+            containerRegistry.RegisterForNavigation<DetailPage,DetailViewModel>(Config.DetailPage);
             containerRegistry.Register<HomePage>();
 
 
