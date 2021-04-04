@@ -3,7 +3,6 @@
 Rafael Eduardo Melo - 1088109
 
 
-https://user-images.githubusercontent.com/49174284/113494609-ca5dc100-94b7-11eb-98bc-0042f734e058.mov
 
 ![Captura de Pantalla 2021-04-03 a la(s) 8 04 01 p  m](https://user-images.githubusercontent.com/49174284/113494613-d21d6580-94b7-11eb-8b9f-9e129cd5b982.png)
 
