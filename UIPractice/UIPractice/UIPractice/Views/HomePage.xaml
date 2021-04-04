@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="UIPractice.Views.HomePage"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true"
+    x:Name="homepage">
+   <ScrollView>
+       <Grid Padding="20,20,20,20" BackgroundColor="White" >
+           <Grid.RowDefinitions>
+               <RowDefinition Height="40" />
+               <RowDefinition Height="55"/>
+               <RowDefinition Height="30"/>
+               <RowDefinition Height="40"/>
+               <RowDefinition Height="220"/>
+               <RowDefinition Height="20"/>
+               <RowDefinition Height="220"/>
+              
+           </Grid.RowDefinitions>
+
+           <Grid.ColumnDefinitions>
+               <ColumnDefinition Width="*" />
+               <ColumnDefinition Width="*" />
+               <ColumnDefinition Width="*" />
+               <ColumnDefinition Width="*" />
+           </Grid.ColumnDefinitions>
+
+           <Label Text="{Binding QuickHelp}" FontAttributes="Bold" FontSize="23" HeightRequest="100" Grid.Row="0"  Grid.ColumnSpan="2"/>
+
+           <ImageButton  Source="{Binding Glass.Image}" Grid.Row="0" Grid.Column="3" HorizontalOptions="End" HeightRequest="300" Padding="0,0,0,20" />
+
+           <ImageButton Source="{Binding Breathe.Image}" Grid.Row="1" Grid.Column="0" Padding="12,12,12,12"
+            BackgroundColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" HeightRequest="200" CornerRadius="10" />
+
+           <ImageButton Source="{Binding Sleep.Image}"  Grid.Row="1"  Grid.Column="1"  Padding="12,12,12,12"
+                        BackgroundColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" HeightRequest="200" CornerRadius="10" />
+
+           <ImageButton Source="{Binding Anxiety.Image}" Grid.Row="1" Grid.Column="2"  Padding="12,12,12,12"
+                        BackgroundColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" HeightRequest="200" CornerRadius="10" />
+
+           <ImageButton Source="{Binding Stress.Image}" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="3" Padding="12,12,12,12"
+                        BackgroundColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" HeightRequest="100" CornerRadius="10" />
+
+            <Label Text="{Binding Breathe_}" VerticalTextAlignment="Center" FontFamily="Arial"
+                   FontSize="Medium" HeightRequest="100" Grid.Row="2" Grid.Column="0" Margin="15,0,0,0" />
+
+            <Label Text="{Binding Sleep_}" VerticalTextAlignment="Center" FontFamily="Arial"
+                   FontSize="Medium" HeightRequest="100" Grid.Row="2" Grid.Column="1" Margin="23,0,0,0" />
+
+            <Label Text="{Binding Anxiety_}" VerticalTextAlignment="Center" FontFamily="Arial"
+                   FontSize="Medium" HeightRequest="100" Grid.Row="2" Grid.Column="2" Margin="18,0,0,0" />
+
+           <Label Text="{Binding Stress_}" VerticalTextAlignment="Center" FontFamily="Arial"
+                   FontSize="Medium" HeightRequest="100" Grid.Row="2" Grid.Column="3" Margin="20,0,0,0" />
+
+            <Label Text="{Binding DailyMeditation}" VerticalTextAlignment="Center" FontAttributes="Bold"
+                   FontSize="22"  Grid.Row="3" Grid.ColumnSpan="3"  />
+
+            <ImageButton Source="{Binding Wedding.Image}"  Grid.Row="4" Grid.ColumnSpan="4"  CornerRadius="30" Padding="0,0,0,0" />
+
+            <Label Text="{Binding RestRelax}" Grid.Row="4" Grid.ColumnSpan="4"  HorizontalTextAlignment="200" VerticalOptions="End"
+                   Margin="25,0,0,50" FontAttributes="Bold" FontSize="20" TextColor="White" />
+
+            <Label Text="{Binding Min}" Grid.Row="4" Grid.ColumnSpan="4" VerticalOptions="End"
+                   Margin="55,0,0,25" FontAttributes="Bold" FontSize="16" TextColor="White" />
+
+           <Image Source="{Binding Clock.Image}" Grid.Row="4" Grid.Column="0" VerticalOptions="End" Margin="-20,0,0,23" />
+
+           <Label  Text="{Binding NewMusic}" FontAttributes="Bold" FontSize="23" VerticalOptions="End" Margin="0,0,0,-10" Grid.Row="5"  Grid.ColumnSpan="2"/>
+
+           <Button  Text="{Binding ViewAll}" TextColor="Gray" HorizontalOptions="End" FontSize="15" Margin="0,0,0,-10"   Grid.Row="5"  Grid.Column="3"/>
+
+           <CollectionView  ItemsSource="{Binding MusicList}"   ItemsLayout="HorizontalList" Grid.Row="6" Grid.ColumnSpan="4">
+               
+               <CollectionView.ItemTemplate>
+                   <DataTemplate>
+                       <Grid Scale="0.9" Padding="10"  >
+                            <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                           <Grid.GestureRecognizers>
+                             <TapGestureRecognizer Command="{Binding Source={x:Reference homepage} , Path=BindingContext.Navigate}" CommandParameter="{Binding .}" />
+                           </Grid.GestureRecognizers>
+                                <Frame HasShadow="False" Padding="0,0,-30,40">
+
+                                <ImageButton Source="{Binding Image}" HorizontalOptions="Center"   />
+
+                                </Frame>
+
+                                <Frame HasShadow="False"   VerticalOptions="EndAndExpand"  Padding="0,0,0,66" Margin="-10,0,-25,-70" >
+                                    
+                                <Label Text="{Binding Name}" FontFamily="Arial" FontAttributes="Bold"
+                                FontSize="21" VerticalTextAlignment="End" Padding="20,10,0,14" TextColor="Black"  /> 
+                                </Frame>
+                                <Label Text="{Binding Minutes}" VerticalTextAlignment="End" Margin="40,0,0,-12"/>
+
+                                <Image Source="{Binding Image2}" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,-15" />
+
+                       </Grid>
+              
+                   </DataTemplate>
+               </CollectionView.ItemTemplate>
+           </CollectionView>
+
+       </Grid>
+   </ScrollView>
+</ContentPage>
+ 
